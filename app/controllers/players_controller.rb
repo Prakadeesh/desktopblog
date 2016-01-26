@@ -14,12 +14,8 @@ class PlayersController < ApplicationController
     if @curr == nil
       @p.save
     else if @curr.runs == runs 
-
-        
       end
-      
-
-      end
+    end
 
 
 
