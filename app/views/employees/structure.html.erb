@@ -1,0 +1,8 @@
+<%=link_to "#{@manager.manager}", structure_employees_path(manager: @manager.manager)%>
+<br/>
+<br/>
+<br/>
+<% @emp.each do | e | %>
+	<%#=e.name%>
+	<%=link_to "#{e.name}", structure_employees_path(manager: e.name)%>
+<% end %>

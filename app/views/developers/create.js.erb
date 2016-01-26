@@ -1,0 +1,5 @@
+var row = "<tr id='developer_<%=@developer.id%>'><td><%=@developer.name%></td><td><%=@developer.manager%></td><td><%= escape_javascript(link_to 'Show', @developer) %></td><td><%= escape_javascript(link_to 'Edit', edit_developer_path(@developer)) %></td><td><%= escape_javascript(link_to 'Destroy', @developer, method: :delete, remote: :true, data: { confirm: 'Are you sure?' }) %></td></tr>"
+$("#developer_table").append(row);
+$("#developer_name").val('');
+$("#developer_manager").val('');
+$("#new_form").hide();

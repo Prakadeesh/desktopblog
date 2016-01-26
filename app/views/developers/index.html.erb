@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<input type="text" id="search_input"><input type="button" id="search_button" value="Search">
+<h1>Listing Developers</h1>
+
+<br>
+<div id="search_result">
+  <%= render "developers" %>
+</div>
+<%= link_to 'New Developer', new_developer_path %>
+
+<script type="text/javascript">
+$("#search_button").on("click",function(){
+  var key_word = $("#search_input").val();
+  // if(key_word != ''){
+    $.get('developers',{keyword: key_word});
+   
+  // }
+});
+</script>
